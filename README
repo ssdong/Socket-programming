@@ -1,0 +1,25 @@
+1. How to run my program
+   1) Run client and server in two different student.cs machines
+      a) I have tested my program on both ubuntu1204-002.student.cs.uwaterloo.ca and
+         ubuntu1204-004.student.cs.uwaterloo.ca machines.
+      b) Run my server.sh in one of the host(002 or 004). Simply type "./server.sh <request_code>".
+         <request_code> can be anything. It can be a string or an integer.
+         Now you shall see the server outputs "SERVER_PORT=<n_port>"
+      c) Run my client.sh on the other host. Simply type "./client.sh <server_address> <n_port> <request_code> <message>"
+         The <server_address> is either "ubuntu1204-002.student.cs.uwaterloo.ca" or "ubuntu1204-004.student.cs.uwaterloo.ca"
+         depends on where the server runs. The <n_port> is the output n_port by server. The <message> is whatever message you input.
+         Remember to enclose the message within double quotes if it contains white spaces. For example, "My name is Jack".
+      d) Now you shall see the terminals output
+         "Server received message: XXXXX"
+         "Client received reversed message: XXXXX"
+   2) Run both client and server in a single student.cs machine
+      a) I have my programm tested on both ubuntu1204-002.student.cs.uwaterloo.ca and
+         ubuntu1204-004.student.cs.uwaterloo.ca machines.
+      b) First, to run my server. Simply type "./server.sh <request_code> &" in
+         The "&" allows the server to run in the background.
+         Now you will see the server outputs "SERVER_PORT=<n_port>".
+      c) Second, to run my client. Simply type "./client.sh localhost <n_port> <request_code> <message>"
+         in the same terminal. Use the n_port and request_code from part b).
+      d) Now, you will see the terminal outputs:
+         "Server received message: XXXXX"
+         "Client received reversed message: XXXXX"
